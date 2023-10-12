@@ -44,19 +44,19 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
       numGuesses += 1
 
       if guess == secretNum:
-        break #They're correct, so break out of this loop.
+        break # They're correct, so break out of this loop.
       if numGuesses > MAX_GUESSES:
         print('You ran out of guesses.')
         print('The answer was {}.'.format(secretNum))
 
       # Ask player if they want to play again.
-      print('Do you want to play again? (yes or no)'"
+      print('Do you want to play again? (yes or no)')
       if not input('> ').lower().startswith('y'):
           break
   print('Thanks for playing!')
 
 
-def getSecretNumb():
+def getSecretNum():
   """Returns a string made up of NUM_DIGITS unique random digits."""
   numbers = list('0123456789') # Create a list of digits 0 to 9.
   random.shuffle(numbers) # Shuffle them into random order.
@@ -94,7 +94,7 @@ def getClues(guess, secretNum):
 
 
 # If the program is run (instead of imported), run the game:
-if_name_ =='_main_':
+if__name__ =='__main__':
   main()
 
   
